@@ -60,8 +60,17 @@
 #Hint 14: Ask the user if they want to restart the game. If they answer yes, clear the console and start a new game of blackjack and show the logo from art.py.
 import random
 
-cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+
+user_cards = []
+computer_cards = []
 
 def deal_card():
+    '''returns a random card from the deck'''
+    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
     ramdom_card = random.choice(cards)
     return ramdom_card
+
+for _ in range(2):
+    user_cards.append(deal_card())
+    computer_cards.append(deal_card())
+
